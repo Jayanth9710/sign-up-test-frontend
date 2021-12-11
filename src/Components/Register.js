@@ -32,7 +32,7 @@ const [failure,setFailure] = useState(false)
     const postData = async (data) => {
         setLoading(true)
         try {
-            let Data = await axios.post(`${env.api}signup`,data);
+            let Data = await axios.post(`${env.api}/signup`,data);
             window.alert("User registered successfully");
             setLoading(false);
             setFailure(false)
@@ -41,7 +41,7 @@ const [failure,setFailure] = useState(false)
         } catch (error) {
             setLoading(false)
             setFailure(true);
-            if(error.message === "E-mail is already registered.Please try with different e-mail ID.") {
+            if(error.message === "Request failed with status code 400") {
                 window.alert("E-mail is already registered.Please use different e-mail ID.");
                 console.log(error)
             } else{

@@ -21,7 +21,7 @@ function Login() {
     const postData = async (values) => {
         setLoading(true)
         try {
-            let userData = await axios.post(`${env.api}signin`,values);
+            let userData = await axios.post(`${env.api}/signin`,values);
             window.localStorage.setItem("app_token",userData.data.token);
             window.localStorage.setItem("user",userData.data.name)
             setLoading(false)
