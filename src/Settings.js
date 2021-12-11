@@ -1,6 +1,7 @@
 let getSettings = () => {
     return {
-        api:"http://localhost:8080"
+        // api:"http://localhost:8080"
+        api:"https://signup-test-backend.herokuapp.com/"
         
         
     }
