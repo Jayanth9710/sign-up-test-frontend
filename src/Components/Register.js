@@ -32,7 +32,7 @@ const [failure,setFailure] = useState(false)
     const postData = async (data) => {
         setLoading(true)
         try {
-            let Data = await axios.post(`${env.api}/signup`,data);
+            let Data = await axios.post(`${env.api}signup`,data);
             window.alert("User registered successfully");
             setLoading(false);
             setFailure(false)
