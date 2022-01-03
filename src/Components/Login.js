@@ -1,7 +1,7 @@
 import React ,{useState} from 'react';
 import * as Yup from 'yup';
 import {Formik,Form} from 'formik';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate,Link} from 'react-router-dom';
 import './Login.css';
 import axios from "axios";
 import env from '../Settings';
@@ -60,6 +60,8 @@ function Login() {
                                     <Textfield label="Password" name="password" type="password" placeholder="Enter your Password"/>
 
                                     <button className='signin__buttons' type='submit'>LOGIN</button>
+                                    <Link to='/forgotpassword' className='link'>
+                                    <button className='signin__buttons' type='submit'>FORGOT PASSWORD</button></Link>
                                 </Form>
                                 {failure && <span className="failure">Something went wrong!</span>}
                             </div>
